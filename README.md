@@ -30,12 +30,14 @@ This project is intentionally written with the following principles:
 ---
 
 ## 📁 Project Structure
+```
 bash-cloud-monitor/
 ├── monitor.sh # Main monitoring script
 ├── .env.example # Configuration template (no secrets)
 ├── logs/
 │ └── monitor.log # Generated logs
 └── README.md
+```
 
 ---
 
@@ -97,13 +99,13 @@ Always use absolute paths in cron jobs.
 
 ## 📊 Data Collected
 
--System Health
--CPU load
--Memory usage
--Disk usage
--AWS Resources
--EC2 instance IDs
--IAM user list
+- System Health
+- CPU load
+- Memory usage
+- Disk usage
+- AWS Resources
+- EC2 instance IDs
+- IAM user list
 
 All data is logged with timestamps for traceability.
 
@@ -111,39 +113,38 @@ All data is logged with timestamps for traceability.
 
 ## 🔐 Security Considerations
 
--No credentials stored in the script
+- No credentials stored in the script
 
--Uses AWS CLI authentication (IAM user or role)
+- Uses AWS CLI authentication (IAM user or role)
 
--External configuration via .env
+- External configuration via .env
 
--Designed to run with least-privilege permissions
+- Designed to run with least-privilege permissions
 
 ## 🚀 Future Improvements
 
--Alerting (email / Slack)
--Threshold-based warnings
--CI pipeline with ShellCheck
--Retry logic for AWS API calls
--Dockerized execution
--Infrastructure provisioning with Terraform
+- Alerting (email / Slack)
+- Threshold-based warnings
+- CI pipeline with ShellCheck
+- Retry logic for AWS API calls
+- Dockerized execution
+- Infrastructure provisioning with Terraform
 
 ---
 
 ## 🧠 Learning Outcomes
 
 This project demonstrates:
+- Bash scripting fundamentals
 
-Bash scripting fundamentals
+- Defensive scripting techniques
 
-Defensive scripting techniques
+- Command substitution
 
-Command substitution
+- Linux system monitoring
 
-Linux system monitoring
+- AWS CLI automation
 
-AWS CLI automation
+- Cron-safe scripting
 
-Cron-safe scripting
-
-DevOps operational mindset
+- DevOps operational mindset
