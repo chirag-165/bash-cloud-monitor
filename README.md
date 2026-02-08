@@ -47,84 +47,90 @@ The following tools must be installed and configured:
 - `jq`
 - `curl`
 
-Verify dependencies:
+## Verify dependencies:
 ```bash
 aws --version
 jq --version
 curl --version
+```
 
-##🔧 Configuration
+---
+
+## 🔧 Configuration
 Create a configuration file from the template:
+```bash
 cp .env.example .env
+```
 
-##▶️ Usage
+---
 
+## ▶️ Usage
 Make the script executable:
-
+```
 chmod +x monitor.sh
-
+```
 
 Run manually:
-
+```
 ./monitor.sh
-
+```
 
 Logs will be written to:
-
+```
 logs/monitor.log
+```
 
-##⏰ Cron Integration (Optional)
+---
+
+## ⏰ Cron Integration (Optional)
 
 This script is cron-safe and can be scheduled for periodic execution.
 
 Example: run every 15 minutes
+```bash
 */15 * * * * /home/username/bash-cloud-monitor/monitor.sh
-
+```
 
 Always use absolute paths in cron jobs.
 
-##📊 Data Collected
-System Health
+---
 
-CPU load
+## 📊 Data Collected
 
-Memory usage
-
-Disk usage
-
-AWS Resources
-
-EC2 instance IDs
-
-IAM user list
+-System Health
+-CPU load
+-Memory usage
+-Disk usage
+-AWS Resources
+-EC2 instance IDs
+-IAM user list
 
 All data is logged with timestamps for traceability.
 
-##🔐 Security Considerations
+---
 
-No credentials stored in the script
+## 🔐 Security Considerations
 
-Uses AWS CLI authentication (IAM user or role)
+-No credentials stored in the script
 
-External configuration via .env
+-Uses AWS CLI authentication (IAM user or role)
 
-Designed to run with least-privilege permissions
+-External configuration via .env
 
-##🚀 Future Improvements
+-Designed to run with least-privilege permissions
 
-Alerting (email / Slack)
+## 🚀 Future Improvements
 
-Threshold-based warnings
+-Alerting (email / Slack)
+-Threshold-based warnings
+-CI pipeline with ShellCheck
+-Retry logic for AWS API calls
+-Dockerized execution
+-Infrastructure provisioning with Terraform
 
-CI pipeline with ShellCheck
+---
 
-Retry logic for AWS API calls
-
-Dockerized execution
-
-Infrastructure provisioning with Terraform
-
-##🧠 Learning Outcomes
+## 🧠 Learning Outcomes
 
 This project demonstrates:
 
